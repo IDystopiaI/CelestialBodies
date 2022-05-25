@@ -299,6 +299,11 @@ INSERT INTO public.galaxy VALUES (5, 'Whirlpool', 23.3, 'redshift', 590);
 --
 
 INSERT INTO public.star VALUES (1, 'Sol', 1, 'G', 696000);
+INSERT INTO public.star VALUES (2, 'Alpheratz', 2, 'B', 1876200);
+INSERT INTO public.star VALUES (3, 'Sirius', 1, 'A', 1190856);
+INSERT INTO public.star VALUES (4, 'Betelgeuse', 1, 'M', 531744000);
+INSERT INTO public.star VALUES (5, 'Vega', 1, 'A', 1644000);
+INSERT INTO public.star VALUES (6, 'Arcturus', 1, 'K', 17678400);
 
 
 --
@@ -333,7 +338,7 @@ SELECT pg_catalog.setval('public.planet_planet_id_seq', 1, false);
 -- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_star_id_seq', 1, true);
+SELECT pg_catalog.setval('public.star_star_id_seq', 6, true);
 
 
 --

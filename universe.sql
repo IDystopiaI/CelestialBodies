@@ -162,8 +162,8 @@ CREATE TABLE public.planet (
     planet_id integer NOT NULL,
     name character varying(30) NOT NULL,
     num_of_moons integer,
-    has_life boolean NOT NULL,
-    visible_by_eye boolean NOT NULL,
+    has_life boolean DEFAULT false NOT NULL,
+    visible_by_eye boolean DEFAULT false NOT NULL,
     star_id integer
 );
 
@@ -292,6 +292,14 @@ INSERT INTO public.galaxy VALUES (5, 'Whirlpool', 23.3, 'redshift', 590);
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.planet VALUES (1, 'Mercury', 0, false, true, 1);
+INSERT INTO public.planet VALUES (2, 'Venus', 0, false, true, 1);
+INSERT INTO public.planet VALUES (3, 'Earth', 1, true, true, 1);
+INSERT INTO public.planet VALUES (4, 'Mars', 2, false, true, 1);
+INSERT INTO public.planet VALUES (5, 'Jupiter', 80, false, true, 1);
+INSERT INTO public.planet VALUES (6, 'Saturn', 83, false, true, 1);
+INSERT INTO public.planet VALUES (8, 'Neptune', 14, false, false, 1);
+INSERT INTO public.planet VALUES (7, 'Uranus', 27, false, false, 1);
 
 
 --
@@ -331,7 +339,7 @@ SELECT pg_catalog.setval('public.moon_moon_id_seq', 1, false);
 -- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.planet_planet_id_seq', 1, false);
+SELECT pg_catalog.setval('public.planet_planet_id_seq', 8, true);
 
 
 --

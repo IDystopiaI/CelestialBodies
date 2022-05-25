@@ -201,7 +201,7 @@ CREATE TABLE public.star (
     name character varying(30) NOT NULL,
     galaxy_id integer,
     class_of_star text NOT NULL,
-    size integer
+    radius_km integer
 );
 
 
@@ -298,6 +298,7 @@ INSERT INTO public.galaxy VALUES (5, 'Whirlpool', 23.3, 'redshift', 590);
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.star VALUES (1, 'Sol', 1, 'G', 696000);
 
 
 --
@@ -332,7 +333,7 @@ SELECT pg_catalog.setval('public.planet_planet_id_seq', 1, false);
 -- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_star_id_seq', 1, false);
+SELECT pg_catalog.setval('public.star_star_id_seq', 1, true);
 
 
 --

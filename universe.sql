@@ -200,7 +200,8 @@ CREATE TABLE public.star (
     star_id integer NOT NULL,
     name character varying(30) NOT NULL,
     galaxy_id integer,
-    class_of_star text NOT NULL
+    class_of_star text NOT NULL,
+    size integer
 );
 
 

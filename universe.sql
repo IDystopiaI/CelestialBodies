@@ -86,9 +86,9 @@ ALTER SEQUENCE public.dwarf_planet_dwarf_planet_id_seq OWNED BY public.dwarf_pla
 CREATE TABLE public.galaxy (
     galaxy_id integer NOT NULL,
     name character varying(30) NOT NULL,
-    width_kpu numeric,
+    width_kpc numeric,
     shift text,
-    distance_to_kpu integer NOT NULL
+    distance_to_center_kpc integer NOT NULL
 );
 
 
@@ -274,6 +274,12 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.galaxy VALUES (1, 'Milky Way', 30, NULL, 8);
+INSERT INTO public.galaxy VALUES (2, 'Andromeda', 67, 'blueshift', 752);
+INSERT INTO public.galaxy VALUES (3, 'Pinwheel', 52.1, 'redshift', 6400);
+INSERT INTO public.galaxy VALUES (4, 'Cigar', 11.3, 'redshift', 3500);
+INSERT INTO public.galaxy VALUES (6, 'Triangulum', 18.4, 'blueshift', 970);
+INSERT INTO public.galaxy VALUES (5, 'Whirlpool', 23.3, 'redshift', 590);
 
 
 --
@@ -305,7 +311,7 @@ SELECT pg_catalog.setval('public.dwarf_planet_dwarf_planet_id_seq', 1, false);
 -- Name: galaxy_galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 1, false);
+SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 
 
 --

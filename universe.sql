@@ -201,7 +201,7 @@ CREATE TABLE public.star (
     name character varying(30) NOT NULL,
     galaxy_id integer,
     class_of_star text NOT NULL,
-    radius_km integer
+    radius_megameter integer
 );
 
 
@@ -300,6 +300,10 @@ INSERT INTO public.planet VALUES (5, 'Jupiter', 80, false, true, 1);
 INSERT INTO public.planet VALUES (6, 'Saturn', 83, false, true, 1);
 INSERT INTO public.planet VALUES (8, 'Neptune', 14, false, false, 1);
 INSERT INTO public.planet VALUES (7, 'Uranus', 27, false, false, 1);
+INSERT INTO public.planet VALUES (9, 'Proxima Centauri b', NULL, false, false, 7);
+INSERT INTO public.planet VALUES (10, 'Proxima Centauri c', NULL, false, false, 7);
+INSERT INTO public.planet VALUES (11, 'Tau Ceti e', NULL, false, false, 8);
+INSERT INTO public.planet VALUES (12, 'Tau Ceti f', NULL, false, false, 8);
 
 
 --
@@ -312,6 +316,8 @@ INSERT INTO public.star VALUES (3, 'Sirius', 1, 'A', 1190856);
 INSERT INTO public.star VALUES (4, 'Betelgeuse', 1, 'M', 531744000);
 INSERT INTO public.star VALUES (5, 'Vega', 1, 'A', 1644000);
 INSERT INTO public.star VALUES (6, 'Arcturus', 1, 'K', 17678400);
+INSERT INTO public.star VALUES (7, 'Proxima Centauri', 1, 'M', 107300);
+INSERT INTO public.star VALUES (8, 'Tau Ceti', 1, 'G', 551900);
 
 
 --
@@ -339,14 +345,14 @@ SELECT pg_catalog.setval('public.moon_moon_id_seq', 1, false);
 -- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.planet_planet_id_seq', 8, true);
+SELECT pg_catalog.setval('public.planet_planet_id_seq', 12, true);
 
 
 --
 -- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_star_id_seq', 6, true);
+SELECT pg_catalog.setval('public.star_star_id_seq', 8, true);
 
 
 --

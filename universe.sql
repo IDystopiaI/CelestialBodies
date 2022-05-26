@@ -126,7 +126,7 @@ CREATE TABLE public.moon (
     planet_id integer,
     mass_kg numeric,
     is_spherical boolean NOT NULL,
-    width integer
+    radius_km integer
 );
 
 
@@ -286,6 +286,11 @@ INSERT INTO public.galaxy VALUES (5, 'Whirlpool', 23.3, 'redshift', 590);
 -- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.moon VALUES (2, 'Deimos', 4, 1476900000000000, false, 6);
+INSERT INTO public.moon VALUES (1, 'Luna', 3, 73420000000000000000000, true, 1736);
+INSERT INTO public.moon VALUES (3, 'Phobos', 4, 10659000000000000, false, 11);
+INSERT INTO public.moon VALUES (4, 'Europa', 5, 47998440000000000000000, true, 1561);
+INSERT INTO public.moon VALUES (5, 'Titan', 6, 134520000000000000000000, true, 2574);
 
 
 --
@@ -338,7 +343,7 @@ SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 -- Name: moon_moon_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.moon_moon_id_seq', 1, false);
+SELECT pg_catalog.setval('public.moon_moon_id_seq', 5, true);
 
 
 --

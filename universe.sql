@@ -268,6 +268,9 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: dwarf_planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.dwarf_planet VALUES (1, 'Pluto', 1, 1930);
+INSERT INTO public.dwarf_planet VALUES (2, 'Ceres', 1, 1801);
+INSERT INTO public.dwarf_planet VALUES (3, 'Eris', 1, 2005);
 
 
 --
@@ -344,7 +347,7 @@ INSERT INTO public.star VALUES (8, 'Tau Ceti', 1, 'G', 551900);
 -- Name: dwarf_planet_dwarf_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.dwarf_planet_dwarf_planet_id_seq', 1, false);
+SELECT pg_catalog.setval('public.dwarf_planet_dwarf_planet_id_seq', 3, true);
 
 
 --
